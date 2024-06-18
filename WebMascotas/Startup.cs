@@ -1,9 +1,9 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(RegistroMascotasWeb.Startup))]
+[assembly: OwinStartup(typeof(WebMascotas.Startup))]
 
-namespace RegistroMascotasWeb
+namespace WebMascotas
 {
     public partial class Startup
     {
