@@ -154,15 +154,15 @@ const pageRegistroDeUsuarioMascota = {
         },
         ObtenerListas: function () {
 
-            let vUrlListaTipoDeDocumentoIdentidad = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/9`;
-            let vUrlListaPreguntaDeSeguridad = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/8`;
-            let vUrlListaGenero = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/1`;
-            let vUrlListaGeneroMascota = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/2`;
-            let vUrlListaColor = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/3`;
-            let vUrlListaTamanio = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/4`;
-            let vUrlListaRaza = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/5`;
-            let vUrlListaCola = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/6`;
-            let vUrlListaOrejas = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/7`;
+            let vUrlListaTipoDeDocumentoIdentidad = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/9`;
+            let vUrlListaPreguntaDeSeguridad = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/8`;
+            let vUrlListaGenero = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/1`;
+            let vUrlListaGeneroMascota = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/2`;
+            let vUrlListaColor = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/3`;
+            let vUrlListaTamanio = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/4`;
+            let vUrlListaRaza = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/5`;
+            let vUrlListaCola = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/6`;
+            let vUrlListaOrejas = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/7`;
             Promise.all([
                 fetch(vUrlListaTipoDeDocumentoIdentidad),
                 fetch(vUrlListaPreguntaDeSeguridad),
@@ -438,7 +438,7 @@ const pageRegistroDeUsuarioMascota = {
             }
 
 
-            let vUrl = `https://localhost:44355/api/usuario/registrar-usuario`;
+            let vUrl = `https://localhost:44342/api/usuario/registrar-usuario`;
 
             let vInit = {};
             vInit.method = "POST";

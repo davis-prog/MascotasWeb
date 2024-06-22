@@ -63,7 +63,7 @@ const pageCambiarContrasenia = {
     methods: {
         ObtenerListas: function () {
 
-            let vUrlListaPreguntaDeSeguridad = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/8`;
+            let vUrlListaPreguntaDeSeguridad = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/8`;
             Promise.all([
                 fetch(vUrlListaPreguntaDeSeguridad)
             ]).then(x => Promise.all(x.map(r => r.json())))
@@ -153,7 +153,7 @@ const pageCambiarContrasenia = {
             vData.IdPreguntaSeguridad = vIdPreguntaSeguridad;
             vData.RespuestaSeguridad = vRespuestaSeguridad;
 
-            let vUrl = `https://localhost:44355/api/usuario/actualizar-credenciales`;
+            let vUrl = `https://localhost:44342/api/usuario/actualizar-credenciales`;
             let vInit = {};
             vInit.method = "POST";
             vInit.headers = {};

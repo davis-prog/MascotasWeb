@@ -137,14 +137,14 @@
     },
     methods: {
         ObtenerListas: function () {
-            let vUrlListaGeneroMascota = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/2`;
-            let vUrlListaColor = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/3`;
-            let vUrlListaTamanio = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/4`;
-            let vUrlListaRaza = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/5`;
-            let vUrlListaCola = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/6`;
-            let vUrlListaOrejas = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/7`;
-            let vUrlListaDistritos = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/11`;
-            let vUrlListaRedesSociales = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/12`;
+            let vUrlListaGeneroMascota = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/2`;
+            let vUrlListaColor = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/3`;
+            let vUrlListaTamanio = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/4`;
+            let vUrlListaRaza = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/5`;
+            let vUrlListaCola = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/6`;
+            let vUrlListaOrejas = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/7`;
+            let vUrlListaDistritos = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/11`;
+            let vUrlListaRedesSociales = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/12`;
 
             Promise.all([
                 fetch(vUrlListaGeneroMascota),
@@ -247,7 +247,7 @@
             vData.IdOrejas = vIdOrejaMascota == 0 ? null : vIdOrejaMascota;;
             vData.DescripcionAdicional = vDescripcionMascota;
 
-            let vUrlListaMascotas = `https://localhost:44355/api/mascota/listar-mascotas-encontradas`;
+            let vUrlListaMascotas = `https://localhost:44342/api/mascota/listar-mascotas-encontradas`;
 
             let vInit = {};
             vInit.method = "POST";
@@ -394,7 +394,7 @@
 
         },
         ObtenerDetallesMascota: function (IdMascota) {
-            let vUrlObtenerDetallesMascota = `https://localhost:44355/api/mascota/obtener-detalles-mascota/` + IdMascota;
+            let vUrlObtenerDetallesMascota = `https://localhost:44342/api/mascota/obtener-detalles-mascota/` + IdMascota;
 
             Promise.all([
                 fetch(vUrlObtenerDetallesMascota)
@@ -428,7 +428,7 @@
             }
         },
         ObtenerContactos: function (IdMascota) {
-            let vUrlObtenerContactos = `https://localhost:44355/api/mascota/obtener-contactos-mascota/` + IdMascota;
+            let vUrlObtenerContactos = `https://localhost:44342/api/mascota/obtener-contactos-mascota/` + IdMascota;
 
             Promise.all([
                 fetch(vUrlObtenerContactos)

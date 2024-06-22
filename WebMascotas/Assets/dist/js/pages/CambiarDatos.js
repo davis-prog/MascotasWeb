@@ -72,7 +72,7 @@
         ObtenerUsuario: function () {
             let ID_Usuario = $('#ID_Usuario').val();
             if (ID_Usuario != "") {
-                let vUrlListaUsuario = `https://localhost:44355/api/usuario/obtener-datos-usuario/` + ID_Usuario;
+                let vUrlListaUsuario = `https://localhost:44342/api/usuario/obtener-datos-usuario/` + ID_Usuario;
 
                 Promise.all([
                     fetch(vUrlListaUsuario)
@@ -97,8 +97,8 @@
             }
         },
         ObtenerListas: function () {
-            let vUrlListaTipoDeDocumentoIdentidad = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/9`;
-            let vUrlListaGenero = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/1`;
+            let vUrlListaTipoDeDocumentoIdentidad = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/9`;
+            let vUrlListaGenero = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/1`;
 
             Promise.all([
                 fetch(vUrlListaTipoDeDocumentoIdentidad),
@@ -215,7 +215,7 @@
             vData.TelefonoFijo = vTelefonoFijo;
             vData.IdGenero = vIdGenero;
 
-            let vUrl = `https://localhost:44355/api/usuario/actualizar-usuario`;
+            let vUrl = `https://localhost:44342/api/usuario/actualizar-usuario`;
 
             let vInit = {};
             vInit.method = "POST";

@@ -7,7 +7,7 @@ namespace WebMascotas.Core
 {
     public class Constantes
     {
-        public const string WebApiContext = "https://localhost:44355/";
+        public const string WebApiContext = "https://localhost:44342/";
         public const string DefaultRedirect = "/";
 
 

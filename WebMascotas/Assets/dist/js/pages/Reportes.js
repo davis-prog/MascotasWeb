@@ -167,7 +167,7 @@ const pageReporte = {
             let anio = $('#txt-fecha').find("input").val();
             let pAnio = anio == "" ? 0 : parseInt(anio);
 
-            let vUrlObtenerReporteP = `https://localhost:44355/api/reporte/obtener-reporte-perdidos/` + pAnio;
+            let vUrlObtenerReporteP = `https://localhost:44342/api/reporte/obtener-reporte-perdidos/` + pAnio;
 
             Promise.all([
                 fetch(vUrlObtenerReporteP),
@@ -200,7 +200,7 @@ const pageReporte = {
 
             let pAnio = anio == "" ? 0 : parseInt(anio);
 
-            let vUrlObtenerReporteE = `https://localhost:44355/api/reporte/obtener-reporte-encontrados/` + pAnio;
+            let vUrlObtenerReporteE = `https://localhost:44342/api/reporte/obtener-reporte-encontrados/` + pAnio;
 
             Promise.all([
                 fetch(vUrlObtenerReporteE)
@@ -233,8 +233,8 @@ const pageReporte = {
 
             let pAnio = anio == "" ? 0 : parseInt(anio);
 
-            let vUrlObtenerReporteE = `https://localhost:44355/api/reporte/obtener-reporte-meses-e/` + pAnio;
-            let vUrlObtenerReporteP = `https://localhost:44355/api/reporte/obtener-reporte-meses-p/` + pAnio;
+            let vUrlObtenerReporteE = `https://localhost:44342/api/reporte/obtener-reporte-meses-e/` + pAnio;
+            let vUrlObtenerReporteP = `https://localhost:44342/api/reporte/obtener-reporte-meses-p/` + pAnio;
 
             Promise.all([
                 fetch(vUrlObtenerReporteE),
@@ -278,7 +278,7 @@ const pageReporte = {
                 return;
             }
 
-            let vUrlObtenerReporte = `https://localhost:44355/api/reporte/obtener-reporte-totales`;
+            let vUrlObtenerReporte = `https://localhost:44342/api/reporte/obtener-reporte-totales`;
 
             Promise.all([
                 fetch(vUrlObtenerReporte)
@@ -316,7 +316,7 @@ const pageReporte = {
             vData = {};
             vData.check = pchek;
 
-            let vUrlReporteDias = `https://localhost:44355/api/reporte/obtener-reporte-dias`;
+            let vUrlReporteDias = `https://localhost:44342/api/reporte/obtener-reporte-dias`;
 
             let vInit = {};
             vInit.method = "POST";

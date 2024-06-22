@@ -221,13 +221,13 @@ const pageMascota = {
             return convertFile;
         },
         ObtenerListas: function () {
-            let vUrlListaGeneroMascota = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/2`;
-            let vUrlListaColor = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/3`;
-            let vUrlListaTamanio = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/4`;
-            let vUrlListaRaza = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/5`;
-            let vUrlListaCola = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/6`;
-            let vUrlListaOrejas = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/7`;
-            let vUrlListaDistritos = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/11`;
+            let vUrlListaGeneroMascota = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/2`;
+            let vUrlListaColor = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/3`;
+            let vUrlListaTamanio = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/4`;
+            let vUrlListaRaza = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/5`;
+            let vUrlListaCola = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/6`;
+            let vUrlListaOrejas = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/7`;
+            let vUrlListaDistritos = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/11`;
 
             Promise.all([
                 fetch(vUrlListaGeneroMascota),
@@ -271,7 +271,7 @@ const pageMascota = {
         ObtenerListasMascotas: function () {
             let ID_Usuario = $('#ID_Usuario').val();
             if (ID_Usuario != "") {
-                let vUrlListaMascotas = `https://localhost:44355/api/mascota/listar-mascota-registrada/` + ID_Usuario;
+                let vUrlListaMascotas = `https://localhost:44342/api/mascota/listar-mascota-registrada/` + ID_Usuario;
 
                 Promise.all([
                     fetch(vUrlListaMascotas)
@@ -362,7 +362,7 @@ const pageMascota = {
             });
         },
         ObtenerDetallesMascota: function (IdMascota) {
-            let vUrlObtenerDetallesMascota = `https://localhost:44355/api/mascota/obtener-detalles-mascota/` + IdMascota;
+            let vUrlObtenerDetallesMascota = `https://localhost:44342/api/mascota/obtener-detalles-mascota/` + IdMascota;
 
             Promise.all([
                 fetch(vUrlObtenerDetallesMascota)
@@ -422,7 +422,7 @@ const pageMascota = {
             }
         },
         ObtenerContactos: function (IdMascota) {
-            let vUrlObtenerContactos = `https://localhost:44355/api/mascota/obtener-contactos-mascota/` + IdMascota;
+            let vUrlObtenerContactos = `https://localhost:44342/api/mascota/obtener-contactos-mascota/` + IdMascota;
 
             Promise.all([
                 fetch(vUrlObtenerContactos)
@@ -467,7 +467,7 @@ const pageMascota = {
             });
         },
         ObtenerRedesSociales: function () {
-            let vUrlListaRedesSociales = `https://localhost:44355/api/tabla-generica/obtener-datos-genericos/12`;
+            let vUrlListaRedesSociales = `https://localhost:44342/api/tabla-generica/obtener-datos-genericos/12`;
             Promise.all([
                 fetch(vUrlListaRedesSociales)
             ]).then(x => Promise.all(x.map(r => r.json())))
@@ -715,7 +715,7 @@ const pageMascota = {
 
                 let vData = {};
                 vData.IdMascotas = IdMascota;
-                let vUrl = `https://localhost:44355/api/mascota/eliminar-mascota`;
+                let vUrl = `https://localhost:44342/api/mascota/eliminar-mascota`;
 
                 let vInit = {};
                 vInit.method = "POST";
@@ -824,9 +824,9 @@ const pageMascota = {
 
             let vUrl;
             if (vIdMascota == 0) {
-                vUrl = `https://localhost:44355/api/mascota/registrar-mascota`;
+                vUrl = `https://localhost:44342/api/mascota/registrar-mascota`;
             } else {
-                vUrl = `https://localhost:44355/api/mascota/actualizar-mascota`;
+                vUrl = `https://localhost:44342/api/mascota/actualizar-mascota`;
             }
 
             let vInit = {};
@@ -886,7 +886,7 @@ const pageMascota = {
                 return;
             }
 
-            let vUrl = `https://localhost:44355/api/mascota/reportar-mascota`;
+            let vUrl = `https://localhost:44342/api/mascota/reportar-mascota`;
 
             let vInit = {};
             vInit.method = "POST";
@@ -918,7 +918,7 @@ const pageMascota = {
             vData.DescripcionCorta = redSocial;
 
 
-            let vUrl = `https://localhost:44355/api/tabla-generica/registrar-tabla-generica`;
+            let vUrl = `https://localhost:44342/api/tabla-generica/registrar-tabla-generica`;
 
             let vInit = {};
             vInit.method = "POST";
