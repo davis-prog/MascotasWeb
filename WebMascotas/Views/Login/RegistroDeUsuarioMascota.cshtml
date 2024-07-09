@@ -100,7 +100,7 @@
                                                     <input id="txt-correoelectronico" name="correoelectronico" type="email" class="form-control" maxlength="100">
 
                                                 </div>
-                                               
+
                                             </div>
                                             <div class="col-md-2">
                                                 <div class="form-group">
@@ -170,70 +170,80 @@
 
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>  DIP </label>
-                                                    <input id="txt-DIP" name="DIP" type="text" class="form-control" maxlength="20" readonly>
-                                                </div>
+                                                @*Elemento donde se mostrará el código QR*@
+                                                <div id="qrcode-container" class="qr-code-centered"></div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label> Nombre </label>
-                                                    <input id="txt-nombremascota" name="nombremascota" type="text" class="form-control" maxlength="20">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>  Género </label>
-                                                    <select id="cbo-generomascota" name="generomascota" class="form-control">
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            <div class="col-md-8">
 
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label> Color  </label>
-                                                    <select id="cbo-color" name="color" class="form-control">
-                                                    </select>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label>  DIP </label>
+                                                            <input id="txt-DIP" name="DIP" type="text" class="form-control" maxlength="20" readonly>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label> Nombre </label>
+                                                            <input id="txt-nombremascota" name="nombremascota" type="text" class="form-control" maxlength="20">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label>  Género </label>
+                                                            <select id="cbo-generomascota" name="generomascota" class="form-control">
+                                                            </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label> Tamaño  </label>
-                                                    <select id="cbo-tamanio" name="tamanio" class="form-control">
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label> Raza </label>
-                                                    <select id="cbo-raza" name="raza" class="form-control">
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label> Cola  </label>
-                                                    <select id="cbo-cola" name="cola" class="form-control">
-                                                    </select>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label> Color  </label>
+                                                            <select id="cbo-color" name="color" class="form-control">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label> Tamaño  </label>
+                                                            <select id="cbo-tamanio" name="tamanio" class="form-control">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label> Raza </label>
+                                                            <select id="cbo-raza" name="raza" class="form-control">
+                                                            </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label> Orejas </label>
-                                                    <select id="cbo-orejas" name="orejas" class="form-control">
-                                                    </select>
+
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label> Cola  </label>
+                                                            <select id="cbo-cola" name="cola" class="form-control">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label> Orejas </label>
+                                                            <select id="cbo-orejas" name="orejas" class="form-control">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label>  Edad </label>
+                                                            <input id="txt-edad" name="edad" type="text" class="form-control" maxlength="2">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>  Edad </label>
-                                                    <input id="txt-edad" name="edad" type="text" class="form-control" maxlength="2">
-                                                </div>
+
                                             </div>
                                         </div>
 
@@ -266,7 +276,7 @@
                                             </div>
                                             <div class="col-md-2">
                                                 <div class="float-left">
-                                                    <button type="submit" class="btn btn-success btn-block">Registrar</button> 
+                                                    <button type="submit" class="btn btn-success btn-block">Registrar</button>
                                                 </div>
                                             </div>
                                             <div class="col-md-9">
@@ -299,9 +309,14 @@
 
     <script src="@Url.Content("~/Assets/dist/js/pages/RegistroDeUsuarioMascota.js")"></script>
     <script>
+
+        // BS-Stepper Init
+        document.addEventListener('DOMContentLoaded', function () {
+            window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+        })
+
         pageRegistroDeUsuarioMascota.init();
 
 
     </script>
 }
- 

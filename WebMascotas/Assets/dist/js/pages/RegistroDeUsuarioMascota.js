@@ -50,8 +50,7 @@ const pageRegistroDeUsuarioMascota = {
 
 
                 var numerosAleatorios = pageRegistroDeUsuarioMascota.methods.GenerarNumerosUnicos(3); 
-                var numerosConcatenados = numerosAleatorios.join("");
-                var qrCodeData = "https://example.com/" + numerosConcatenados; // Cambia la URL
+                var qrCodeData = "https://example.com/" + numerosAleatorios; // Cambia la URL
                 var qrcode = new QRCode(document.getElementById("qrcode-container"), {
                     text: qrCodeData,
                     width: 200,
@@ -467,15 +466,18 @@ const pageRegistroDeUsuarioMascota = {
         },
         GenerarNumerosUnicos: function (cantidad) {
             var numeros = [];
+            var resultado = '';
 
             while (numeros.length < cantidad) {
-                var numero = Math.floor(Math.random() * 100) + 1;
+                var numero = Math.floor(Math.random() * 10); // Genera un número aleatorio del 0 al 9
+
                 if (numeros.indexOf(numero) === -1) {
                     numeros.push(numero);
+                    resultado += numero; // Concatena el número a la cadena resultado
                 }
             }
 
-            return numeros;
+            return resultado;
         }
     }
 

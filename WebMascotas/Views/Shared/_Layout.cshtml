@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
     <title>@ViewBag.Title - Portal De Mascotas </title>
-     
+
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
@@ -22,13 +22,13 @@
     <link rel="stylesheet" href="~/Assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
     <!-- Select2 -->
     <link rel="stylesheet" href="~/Assets/plugins/select2/css/select2.min.css">
-    <link rel="stylesheet" href="~/Assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css"> 
+    <link rel="stylesheet" href="~/Assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
     <!-- SweetAlert2 -->
     <link rel="stylesheet" href="~/Assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
     <!-- Toastr -->
-    <link rel="stylesheet" href="~/Assets/plugins/toastr/toastr.min.css"> 
+    <link rel="stylesheet" href="~/Assets/plugins/toastr/toastr.min.css">
     <!-- Ekko Lightbox -->
-    <link rel="stylesheet" href="~/Assets/plugins/ekko-lightbox/ekko-lightbox.css"> 
+    <link rel="stylesheet" href="~/Assets/plugins/ekko-lightbox/ekko-lightbox.css">
     <!-- DataTables -->
     <link rel="stylesheet" href="~/Assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="~/Assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -39,6 +39,25 @@
     <link rel="stylesheet" href="~/Assets/plugins/dropzone/min/dropzone.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="~/Assets/dist/css/adminlte.min.css" />
+
+
+    <style>
+        /* Estilos para centrar el código QR */
+        .qr-code-centered {
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            height: 100%; /* Ajusta la altura si es necesario */
+        }
+
+        /* Estilos adicionales para el contenedor del código QR */
+        #qr-code-container {
+            width: 100px; /* Ancho del código QR */
+            height: 100px; /* Alto del código QR */
+            border: 1px solid #000; /* Borde para visualización */
+            /* Otros estilos según sea necesario */
+        }
+    </style>
 
 </head>
 <body class="hold-transition sidebar-collapse layout-top-nav">
@@ -74,8 +93,8 @@
                         </li>
 
                         @*<li class="nav-item">
-                            <a href="#" class="nav-link">Contacto</a>
-                        </li>*@
+                                <a href="#" class="nav-link">Contacto</a>
+                            </li>*@
 
                         @if (User.Identity.IsAuthenticated)
                         {
@@ -330,6 +349,8 @@
     <script src="~/Assets/dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="~/Assets/dist/js/demo.js"></script>
+    <!-- Generador QR --> 
+    <script src="~/Assets/dist/qr/qrcode.min.js"></script>
 
     <script type="text/javascript">
         var baseSiteUrl = '@Url.Content("~/")';
@@ -343,10 +364,6 @@
 
         });
 
-        // BS-Stepper Init
-        document.addEventListener('DOMContentLoaded', function () {
-            window.stepper = new Stepper(document.querySelector('.bs-stepper'))
-        })
 
     </script>
     @*<script src="~/Content/js/app.js"></script>*@
